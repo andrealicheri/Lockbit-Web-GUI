@@ -1,7 +1,7 @@
 # Lockbit Ransomware Web GUI
 
 This is a web GUI for the leaked build of the Lockbit ransomware.\
-This is NOT a source code leak nor a newer build. It's just an easier way to use the ransomware (for educational purposes only, ofc).\
+This is NOT a source code leak nor a newer build. It's just an easier way to use the ransomware (for educational purposes only, ofc).
 ## User guide
 - Clone this repository
 - Install the requirements (`pip install -r requirements.txt`)
