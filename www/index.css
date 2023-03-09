@@ -1,0 +1,41 @@
+body {
+	font-family: 'Josefin Sans', sans-serif;
+	padding: 0;
+	margin: 0;
+}
+.top-bar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 3px;
+	padding-right: 3px;
+	color: dodgerblue;
+	width: 100%;
+	display: flex;
+}
+.logo {
+	width: 10%;
+	height: auto;
+}
+
+.title {
+	position: absolute;
+	right: 30px;
+	top: 10px;
+	font-size: 40px;
+}
+
+.options {
+	background-color: hsl(0, 0%, 80%);
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.form-container {
+	background-color: white;
+	margin: 2%;
+	background-color: hsl(0, 0%, 100%);
+	padding: 10px;
+	border-radius: 2%;
+}

